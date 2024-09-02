@@ -1,1 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Our Custom CSS-->
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Bootstrap CDN Code: (I removed the integrity/anonymous attriutes)-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!--Google Fonts: PT Sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- PT Mono-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=PT+Mono&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Icons-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <!-- Leaflet CSS -->
+    <link
+      href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+      rel="stylesheet"
+    />
+    <title>Carter's Portfolio</title>
+  </head>
+  <body>
+    <div class="container-fluid px-0">
+      <!--------- Navbar --------->
+      <nav class="navbar navbar-expand-lg navbar-dark shadow bg-primary" style="--bs-bg-opacity: .80">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/Portfolio/">
+            Carter's Portfolio
+          </a>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="container px-3">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto me-4 my-3 my-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#about">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link me-lg-3" href="#contact">Contact</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--------- End Navbar --------->
+
+      <!-- Hero -->
+      <header class="bg-light py-5">
+        <div class="container px-5">
+          <div class="row align-items-center">
+            <div class="col-lg-8 col-xl-7 col-xxl-6">
+              <div class="my-5">
+                <h2 class="text-muted text-center fw-bold mb-2">Carter Jones</h2>
+                <p class="lead text-muted text-center mb-4">
+                 Hi I'm Carter! I am an Artificial Intelligence Major at Drake
+                 University based in Des Moines, IA. 
+                </p>
+                <div class="d-grid gap-3 d-sm-flex justify-content-center">
+                  <a
+                    class="btn btn-primary btn-large text-uppercase"
+                    href="#about"
+                  >
+                    Learn More
+                    <span class="material-symbols-outlined">info</span>
+                  </a>
+                  <a
+                    class="btn btn-outline-primary btn-large text-uppercase"
+                    href="#projects"
+                  >
+                    View My Work
+                    <span class="material-symbols-outlined ms-2"
+                      >Search</span
+                    >
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-5 col-xxl-6 justify-content-center">
+              <img
+                class="img-fluid rounded-3 my-5"
+                src="images/hero.jpeg"
+                alt="Hero Image"
+              />
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- End Hero-->
+
+      <main class="bg-light">
+        <!-- About -->
+        <section id="about" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">About</h2>
+              <p class="lead text-muted mb-5">
+                I am an AI and Music double major at Drake University
+                in Des Moines, IA. I love learning new things and through
+                a combination of my university classes and personal projects
+                have a wide and versatile knowledge base. I am proficient in 
+                Python and have experience in HTML and Javascript. I am also
+                capable of writing using CSS, JSON, and YAML. In my freetime I 
+                enjoy reading, working on projects hosted on my small Homelab, and 
+                spending time with friends and family.
+              </p>
+            </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="d-flex mb-5 about">
+                  <span class="material-symbols-outlined m-auto text-primary"
+                    >Dns</span
+                  >
+                </div>
+                <h5>Homelab</h5>
+                <p class="text-muted mb-0">
+                  I have a small homelab allowing me to experiment and
+                  learn through self hosted services and related projects.
+                </p>
+              </div>
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="d-flex mb-5 about">
+                  <span class="material-symbols-outlined m-auto text-primary"
+                    >School</span
+                  >
+                </div>
+                <h5>Student</h5>
+                <p class="text-muted mb-0">
+                  As a student I have experience working in a collaborative
+                  environment and am consistently practicing my coding skills
+                  through class assignments and projects.
+                </p>
+              </div>
+              <div class="col-lg-4 mx-auto mb-5">
+                <div class="d-flex mb-5 about">
+                  <span class="material-symbols-outlined m-auto text-primary"
+                    >Book_2</span
+                  >
+                </div>
+                <h5>Double Major</h5>
+                <p class="text-muted mb-0">
+                  Being a double major I have a diverse education and strong humanities
+                  and arts background. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End About -->
+
+        <!-- Projects -->
+        <section id="projects" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">Projects</h2>
+              <p class="lead text-muted mb-5">
+                Here's some of what I've worked on:
+              </p>
+            </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-lg-3 mx-auto mb-5">
+                <div class="card h-100 shadow-lg border-0 bg-light">
+                  <img
+                    class="card-img-top"
+                    src="images/battleship.png"
+                    alt="Project 1"
+                  />
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Python Battleship Game</h5>
+                    <div class="mb-2">
+                      <div class="badge bg-primary rounded-pill">Python</div>
+                    </div>
+                    <p class="card-text">
+                      For my Intro to Computer Science course's final project
+                      I created a battleship game in python and using Pygame and 
+                      Pygbag put the game on Itch.io.
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent mb-3">
+                    <a
+                      class="btn btn-outline-primary btn-sm text-uppercase"
+                      href="https://github.com/alicater/CS-65-Final-Battle-Ship"
+                      target="_blank"
+                    >
+                      <span class="material-symbols-outlined me-1"
+                        >code</span
+                      >
+                      Source Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mx-auto mb-5">
+                <div class="card h-100 shadow-lg border-0 bg-light">
+                  <img
+                    class="card-img-top"
+                    src="images/omv.png"
+                    alt="Project 2"
+                  />
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Openmedia Vault NAS</h5>
+                    <div class="mb-2">
+                      <div class="badge bg-primary rounded-pill">Docker</div>
+                      <div class="badge bg-primary rounded-pill">
+                        Linux
+                      </div>
+                      <div class="badge bg-primary rounded-pill">
+                        Network Security
+                      </div>
+                    </div>
+                    <p class="card-text">
+                      Using OMV (openmedia vault) I was able to set up a 
+                      NAS (network attached storage device) and learn about 
+                      network infastructure in the average consumer's home. I
+                      regularly used Docker to containerize other services (like
+                      a different file system gui) that were built on top of OMV.
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent mb-3">
+                    <a
+                      class="btn btn-outline-primary btn-sm text-uppercase"
+                      href="https://github.com/alicater/Homelab"
+                      target="_blank"
+                    >
+                      <span class="material-symbols-outlined me-1">code</span>
+                      Service Configurations
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 mx-auto mb-5">
+                <div class="card h-100 shadow-lg border-0 bg-light">
+                  <img
+                    class="card-img-top"
+                    src="images/taxi.gif"
+                    alt="Project 3"
+                  />
+                  <div class="card-body p-4">
+                    <h5 class="card-title mb-3">Reinforcement Learning: Taxi</h5>
+                    <div class="mb-2">
+                      <div class="badge bg-primary rounded-pill">Reinforcement Learning</div>
+                      <div class="badge bg-primary rounded-pill">
+                        Python
+                      </div>
+                      <div class="badge bg-primary rounded-pill">APIs</div>
+                    </div>
+                    <p class="card-text">
+                      For my Artificial Intelligence course we had to implement the Q-Learning 
+                      algorithm on one of the OpenAI Gymansium Environments, an industry and API
+                      standard for reinforcement learning. I implemented the algorithm on the Taxi 
+                      environment apart of the Gymnasium's Toy Text Environments.
+                    </p>
+                  </div>
+                  <div class="card-footer bg-transparent mb-3">
+                    <a
+                      class="btn btn-outline-primary btn-sm text-uppercase"
+                      href="https://github.com/alicater/AI-Q-Learning-Taxi-Implementation"
+                      target="_blank"
+                    >
+                      <span class="material-symbols-outlined me-1">code</span>
+                      Source Code
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- End Projects -->
+
+        <!-- Contact -->
+        <section id="contact" class="text-center py-5">
+          <div class="container py-5">
+            <div class="row justify-content-center">
+              <h2 class="fw-bold">Contact</h2>
+              <p class="lead text-muted mb-5">
+                Want to get in contact? Here's the best way to reach out!
+              </p>
+            </div>
+          </div>
+          <div class="container mb-5">
+            <div class="row">
+              <div class="col-xl-5 col-xxl-6 mb-5">
+                <div id="map"></div>
+              </div>
+              <div class="col-lg-8 col-xl-7 col-xxl-6 mb-5">
+                <div class="mb-5">
+                  <h6 class="text-uppercase mb-2">Email</h6>
+                  <p class="lead mb-0">carter.jones@drake.edu</p>
+                </div>
+                <div class="mb-5">
+                  <h6 class="text-uppercase mb-2">Address</h6>
+                  <p class="lead mb-0">Des Moines, IA</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Contact -->
+      </main>
+    </div>
+    <hr />
+
+    <!-- Footer -->
+    <footer class="text-center py-4 bg-primary" style="--bs-bg-opacity: .80">
+      <div class="container text-white px-5 mb-2">
+        Copyright &copy; 2024, Carter's Portfolio
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+  </body>
+</html>
 
